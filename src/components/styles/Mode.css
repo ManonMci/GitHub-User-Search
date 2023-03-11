@@ -1,0 +1,24 @@
+.devFinder{
+    display:flex;
+    margin:auto;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.devFinder p{
+    font-size:26px;
+    font-weight:700;
+}
+
+.Dark-mode{
+    display:flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.dark-button{
+    width:100%;
+    background-color:#F6F8FF;
+    color:grey;
+    font-weight:700;
+}

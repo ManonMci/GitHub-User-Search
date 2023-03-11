@@ -1,0 +1,90 @@
+.card{
+    margin:auto;   
+    background-color: #FEFEFE;
+    border-radius:1em;
+    height:300px;
+    box-shadow:0px 2px 20px 0px #b6c4dc;
+    margin-top:2em;
+    display:flex;
+    padding-top:1em;
+    padding:2em;
+}
+.avatar{
+    width:30%;
+    display:flex;
+    align-items: start;
+    justify-content: center;
+}
+.avatar-img{
+    width:70%;
+    border-radius:20em;
+}
+
+.profil{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:80%;
+}
+
+.bio{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    flex-direction:column;
+    color:#697C9A;
+}
+.pseudo{
+    display:flex;
+    justify-content: space-between;
+}
+
+.array{
+    width:100%;
+}
+
+ul{
+    display:flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding:0;
+}
+li{
+    padding-bottom:0.5em;
+}
+
+.social{
+    width:100%;
+    color:#697C9A;
+}
+
+h1{
+    font-size:26px;
+    line-height:38px;
+    color:black;
+}
+
+table{
+    display:flex;
+    background-color:#F6F8FF;
+    border-radius:0.5em;
+    padding:1em;
+    margin-top:1em;
+    margin-bottom:1em;
+}
+tbody{
+    width:100%;
+}
+tr{
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+    color:#697C9A;
+}
+td{
+    width:20%;
+}
+
+.p-date{
+    margin-top:1.5em;
+}
