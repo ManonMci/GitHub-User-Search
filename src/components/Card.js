@@ -1,15 +1,13 @@
 import './styles/Card.css';
-import avatar from '../assets/github-icon.png';
 import twitter from '../assets/icon-twitter.svg';
 import website from '../assets/icon-website.svg';
 import company from '../assets/icon-company.svg';
 import location from '../assets/icon-location.svg';
+import {Search} from '../components/SearchBar';
 
-import {Api} from '../api/Script';
 
 function Card() {
-    const data = Api();
-
+    const data = Search();
     return (
     <div className="card">
         <div className="avatar">

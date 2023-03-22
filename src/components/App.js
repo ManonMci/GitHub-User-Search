@@ -6,6 +6,7 @@ import Search from '../components/SearchBar';
 import Card from '../components/Card';
 import Mode from "../components/Mode";
 
+
 function App() {
 return (
     <div className="App">
