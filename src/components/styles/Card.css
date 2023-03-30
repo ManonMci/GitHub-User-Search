@@ -1,3 +1,8 @@
+p{
+    margin:0;
+    padding:0;
+}
+
 .card{
     margin:auto;   
     background-color: #FEFEFE;
@@ -6,25 +11,27 @@
     box-shadow:0px 2px 20px 0px #b6c4dc;
     margin-top:2em;
     display:flex;
+    justify-content: space-between;
     padding-top:1em;
     padding:2em;
 }
 .avatar{
-    width:30%;
+    width:20%;
     display:flex;
     align-items: start;
     justify-content: center;
 }
 .avatar-img{
-    width:70%;
+    width:100%;
     border-radius:100%;
+    padding:0;
 }
 
 .profil{
     display:flex;
     flex-direction: column;
     justify-content: space-around;
-    width:80%;
+    width:75%;
 }
 
 .bio{
@@ -37,10 +44,12 @@
 .pseudo{
     display:flex;
     justify-content: space-between;
+    margin-bottom:1.5em;
 }
 
 .array{
     width:100%;
+    margin-top:0.5em;
 }
 
 ul{
@@ -50,18 +59,20 @@ ul{
     padding:0;
 }
 li{
+    display:flex;
     padding-bottom:0.5em;
+    font-size:15px;
 }
 
 .social{
-    width:100%;
+    width:90%;
     color:#697C9A;
 }
 
 h1{
     font-size:26px;
-    line-height:38px;
     color:black;
+    margin:0;
 }
 
 table{
@@ -77,22 +88,42 @@ tbody{
 }
 tr{
     display:flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     width:100%;
     color:#697C9A;
     text-align:center;
 }
 td{
     width:30%;
-    font-size:1.1em;
+    font-size:16px;
 }
 
 .p-date{
-    margin-top:1.5em;
+    margin-top:0.5em;
+    font-size:15px;
 }
 
 .td-value{
     color:black;
     text-align:center;
     font-weight:bold;
+    font-size:22px;
+}
+
+.p-lien{
+    font-size:16px;
+    color: #0079FF;
+    padding-top:0.4em;
+}
+
+img{
+    padding-right: 1em;
+}
+
+a{
+    text-decoration:none;
+    color:grey;
+}
+a:hover{
+    font-weight:bolder;
 }

@@ -6,12 +6,21 @@ import location from "../assets/icon-location.svg";
 
 function Card({ data }) {
   if (data.message === "Not Found") {
-    return "Aie.. aucun utilisateur trouvé :(";
+    return 
+    <div>
+      <p>Aie.. aucun utilisateur trouvé </p>
+    </div>;
   }
 
   if (data.documentation_url === "https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting") {
     return "Oups.. Vous ne pouvez plus envoyer de requete Api !";
   }
+
+  // Je formate la date 
+
+const createdAtDate = new Date(data.created_at);
+const options = { day: 'numeric', year: 'numeric', month: 'long'};
+const formattedDate = createdAtDate.toLocaleDateString("en-GB", options);
 
   return (
     <div className="global">
@@ -28,10 +37,14 @@ function Card({ data }) {
             <div className="pseudo">
               <div className="">
                 <h1>{data.name}</h1>
-                <p>@{data.login}</p>
+                <a href={data.html_url}>
+
+               
+                <p className="p-lien">@{data.login}</p>
+                </a>
               </div>
               <div className="date">
-                <p className="p-date"></p>
+                <p className="p-date">Joined {formattedDate}</p>
               </div>
             </div>
             <p>{data.bio}</p>
@@ -61,7 +74,7 @@ function Card({ data }) {
                     {data.location}
                   </li>
                 </a>
-                <a>
+                <a href={data.html_url}>
                   <li>
                     {" "}
                     <img alt="icone de site" src={website} />

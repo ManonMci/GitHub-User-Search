@@ -12,12 +12,11 @@ export function Search() {
    useEffect(() => {
        async function fetchDataGit(){
            try{
-               // destructuration de l'objet
-               //const response = await fetch(`https://api.github.com/users/${searchData.userName}`);
-              // const data = await response.json();
-              //setData(data);
-              // console.log(data);
-              // console.log(response);
+              const response = await fetch(`https://api.github.com/users/${searchData.userName}`);
+              const data = await response.json();
+              setData(data);
+              //console.log(data);
+              //console.log(response);
            } catch (error){
                console.error(error);
            }
@@ -47,11 +46,10 @@ return (
           <input 
             type="text" 
             name="userName"
-            value={searchData.userName}
+            value={searchData.userName} 
             onChange={handleChange} 
             placeholder="Search GitHub username.."
           />
-         
         </form>
         <Card 
           data = {data}
