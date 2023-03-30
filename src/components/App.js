@@ -12,7 +12,6 @@ return (
     <div className="App">
       <Mode/>
       <Search/>
-      <Card/>
     </div>
   );
 }

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import loupe from '../assets/icon-search.svg';
 
-export function Api(){
-  const [searchData, setSearchData] = useState({userName:""});
 
+export function Api(){
+   const [searchData, setSearchData] = useState({userName:"octocat"});
     const [data, setData] = useState({});
+
     useEffect(() => {
         async function fetchDataGit(){
             try{
@@ -12,10 +13,10 @@ export function Api(){
                 const response = await fetch(`https://api.github.com/users/${searchData.userName}`);
                 const data = await response.json();
                 setData(data);
-                //console.log(data);
+                console.log(data);
                 console.log(response);
             } catch (error){
-                console.error(error);
+               // console.error(error);
             }
         }
         fetchDataGit();

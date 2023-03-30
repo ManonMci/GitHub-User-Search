@@ -1,36 +1,36 @@
 import "./styles/SearchBar.css";
 import React, {useState, useEffect} from 'react';
 import loupe from '../assets/icon-search.svg';
-
+import Card from '../components/Card';
 
 export function Search() {
-  const [searchData, setSearchData] = useState({userName:""});
-
+  const [searchData, setSearchData] = useState({userName:"octocat"});
   const [data, setData] = useState({});
-  useEffect(() => {
-      async function fetchDataGit(){
-          try{
-              // destructuration de l'objet
-              const response = await fetch(`https://api.github.com/users/${searchData.userName}`);
-              const data = await response.json();
-              setData(data);
-              console.log(data);
-              console.log(response);
-          } catch (error){
-              console.error(error);
-          }
-      }
-      fetchDataGit();
-      // permet l'ajout de la valeur au tableau de dependance
-  }, [searchData.userName]);
+  //console.log(searchData)
+  //console.log(data)
 
-  //const [searchData, setSearchData] = useState({userName:""});
+   useEffect(() => {
+       async function fetchDataGit(){
+           try{
+               // destructuration de l'objet
+               //const response = await fetch(`https://api.github.com/users/${searchData.userName}`);
+              // const data = await response.json();
+              //setData(data);
+              // console.log(data);
+              // console.log(response);
+           } catch (error){
+               console.error(error);
+           }
+       }
+       fetchDataGit();
+       // permet l'ajout de la valeur au tableau de dependance apres execution de la requete
+   }, [searchData.userName]);
 
-  const handleSubmit = (event) => {
+
+   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(searchData);
+    //console.log(searchData);
   }
-
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -40,8 +40,7 @@ export function Search() {
     }));
   }
 
-    return (
-      data &&
+return (
       <div className="searchBar">
         <form onSubmit={handleSubmit}>
           <img className="img-search" alt="icone de loupe" src={loupe} />
@@ -52,8 +51,11 @@ export function Search() {
             onChange={handleChange} 
             placeholder="Search GitHub username.."
           />
-          <button type="submit">Search</button>
+         
         </form>
+        <Card 
+          data = {data}
+        />
       </div>
     )
 };

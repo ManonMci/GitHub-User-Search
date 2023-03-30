@@ -80,11 +80,19 @@ tr{
     justify-content: space-around;
     width:100%;
     color:#697C9A;
+    text-align:center;
 }
 td{
-    width:20%;
+    width:30%;
+    font-size:1.1em;
 }
 
 .p-date{
     margin-top:1.5em;
+}
+
+.td-value{
+    color:black;
+    text-align:center;
+    font-weight:bold;
 }
