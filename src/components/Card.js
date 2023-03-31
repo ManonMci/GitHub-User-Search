@@ -4,23 +4,22 @@ import website from "../assets/icon-website.svg";
 import company from "../assets/icon-company.svg";
 import location from "../assets/icon-location.svg";
 
+
+// Gestion du blocage du nombre de requete api 
 function Card({ data }) {
   if (data.message === "Not Found") {
-    return 
-    <div>
-      <p>Aie.. aucun utilisateur trouvé </p>
-    </div>;
+    return "Aie.. aucun utilisateur trouvé "
   }
 
   if (data.documentation_url === "https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting") {
     return "Oups.. Vous ne pouvez plus envoyer de requete Api !";
   }
 
-  // Je formate la date 
-
-const createdAtDate = new Date(data.created_at);
-const options = { day: 'numeric', year: 'numeric', month: 'long'};
-const formattedDate = createdAtDate.toLocaleDateString("en-GB", options);
+  
+  // Format de date de type "23 novembre 2034"
+  const createdAtDate = new Date(data.created_at);
+  const options = { day: 'numeric', year: 'numeric', month: 'long'};
+  const formattedDate = createdAtDate.toLocaleDateString("en-GB", options);
 
   return (
     <div className="global">
@@ -38,9 +37,7 @@ const formattedDate = createdAtDate.toLocaleDateString("en-GB", options);
               <div className="">
                 <h1>{data.name}</h1>
                 <a href={data.html_url}>
-
-               
-                <p className="p-lien">@{data.login}</p>
+                  <p className="p-lien">@{data.login}</p>
                 </a>
               </div>
               <div className="date">
@@ -66,7 +63,7 @@ const formattedDate = createdAtDate.toLocaleDateString("en-GB", options);
             </table>
           </div>
           <div className="social">
-            <ul>
+            <ul className="ul-social">
               <div className="social-1">
                 <a>
                   <li>
@@ -76,7 +73,6 @@ const formattedDate = createdAtDate.toLocaleDateString("en-GB", options);
                 </a>
                 <a href={data.html_url}>
                   <li>
-                    {" "}
                     <img alt="icone de site" src={website} />
                     {data.html_url}
                   </li>
@@ -85,14 +81,12 @@ const formattedDate = createdAtDate.toLocaleDateString("en-GB", options);
               <div className="social-2">
                 <a>
                   <li>
-                    {" "}
                     <img alt="icone de twitter" src={twitter} />
                     {data.twitter_username}
                   </li>
                 </a>
                 <a>
                   <li>
-                    {" "}
                     <img alt="icone de github" src={company} />
                     {data.company}
                   </li>

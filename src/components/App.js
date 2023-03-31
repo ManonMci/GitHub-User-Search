@@ -4,7 +4,7 @@ import Mode from "../components/Mode";
 
 
 function App() {
-return (
+  return (
     <div className="App">
       <Mode/>
       <Search/>
