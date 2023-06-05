@@ -1,6 +1,7 @@
 # Challenge Frontend Mentor - GitHub user search app solution
 
-
+<strong>Langages et Outils</strong>
+React, API Github. 
 
 
 
