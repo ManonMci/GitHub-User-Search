@@ -1,4 +1,4 @@
-# Frontend Mentor - GitHub user search app solution
+# Challenge Frontend Mentor - GitHub user search app solution
 
 
 
