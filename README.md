@@ -1,7 +1,7 @@
 # Challenge Frontend Mentor - GitHub user search app solution
 
 ## Langages et outils
-React, API Github. 
+React, API Github, Figma, Vscode.
 
 
 
