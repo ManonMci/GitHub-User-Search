@@ -4,7 +4,7 @@
 React, API Github, Figma, Vscode.
 
 ## Objectifs et Fonctionnalités
-- Apprendre les bases de React nottament les hooks. 
+- Apprendre les bases de React notament les hooks. 
 - Rechercher un utilisateur github par son username.  
 - Importer via l'API public de github des informations générales sur l'utilisateur. 
 
